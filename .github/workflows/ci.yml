@@ -15,3 +15,15 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+        name: yarn install
+      run: |
+        yarn install
+    - name: yarn test
+      run: |
+        yarn test 
+      env:
+        CI: true
+      
+    - name: yarn build
+      run: |
+        yarn run build --if-present
